@@ -1,0 +1,14 @@
+# ===========================================
+# FREE AI Chat - No credit card required!
+# ===========================================
+# Add ONE of these to enable ChatGPT-like chat for any question.
+# Copy this file to .env and add your key.
+
+# Option 1: Google Gemini (FREE) - https://aistudio.google.com/app/apikey
+VITE_GEMINI_API_KEY=
+
+# Option 2: Groq (FREE) - https://console.groq.com/keys
+# VITE_GROQ_API_KEY=
+
+# Option 3: OpenAI (paid) - https://platform.openai.com/api-keys
+# VITE_OPENAI_API_KEY=
