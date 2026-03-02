@@ -426,7 +426,7 @@ export default function HomePage() {
                     </motion.a>
                     <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                       <Link
-                        to="/projects"
+                        to={project.slug ? `/projects/${project.slug}` : '/projects'}
                         className="inline-flex items-center justify-center px-6 py-3 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary/10 transition-all duration-300"
                       >
                         View Case Study

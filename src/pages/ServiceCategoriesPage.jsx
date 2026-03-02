@@ -4,9 +4,10 @@ import { portfolioData } from '../data/portfolio'
 import Footer from '../components/Footer'
 
 export default function ServiceCategoriesPage() {
-  const { serviceSlug } = useParams()
-  const skill = portfolioData.skills.find((s) => s.slug === serviceSlug)
-  const categories = portfolioData.serviceCategories?.[serviceSlug]
+  const { serviceSlug, slug } = useParams()
+  const effectiveSlug = serviceSlug || slug
+  const skill = portfolioData.skills.find((s) => s.slug === effectiveSlug)
+  const categories = portfolioData.serviceCategories?.[effectiveSlug]
 
   if (!skill || !categories) {
     return (
@@ -57,7 +58,7 @@ export default function ServiceCategoriesPage() {
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
               >
                 <Link
-                  to={`/projects/${serviceSlug}/${cat.slug}`}
+                  to={`/projects/${effectiveSlug}/${cat.slug}`}
                   className="card-premium block group"
                 >
                   <h3 className="font-semibold text-lg text-foreground mb-2 group-hover:text-primary transition-colors">

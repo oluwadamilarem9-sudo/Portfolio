@@ -97,10 +97,18 @@ export default function ProjectsPage() {
                 <div className="p-6">
                   <h3 className="font-semibold text-xl text-foreground mb-3">{project.title}</h3>
                   <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-4">
+                    {project.slug && (
+                      <Link
+                        to={`/projects/${project.slug}`}
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+                      >
+                        View case study →
+                      </Link>
+                    )}
                     <Link
                       to="/hire-me"
-                      className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary hover:underline"
                     >
                       Inquire about project
                     </Link>
