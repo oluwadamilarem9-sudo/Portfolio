@@ -541,9 +541,12 @@ export default function HomePage() {
                   <span className="text-primary text-sm">{personal.email}</span>
                 </div>
               </motion.a>
-              <motion.div whileHover={{ x: 4, scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                to="/hire-me"
+              <motion.a
+                href="https://github.com/oluwadamilarem9-sudo"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ x: 4, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 className="flex items-center gap-3 p-4 rounded-xl border border-border bg-card hover:border-primary/40 hover:bg-primary/5 transition-[var(--transition-smooth)] group"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-primary-foreground group-hover:scale-110 transition-transform">
@@ -553,11 +556,13 @@ export default function HomePage() {
                   <span className="block font-medium text-foreground">GitHub</span>
                   <span className="text-primary text-sm">@oluwadamilarem9-sudo</span>
                 </div>
-              </Link>
-              </motion.div>
-              <motion.div whileHover={{ x: 4, scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                to="/hire-me"
+              </motion.a>
+              <motion.a
+                href="https://x.com/mhentor"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ x: 4, scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 className="flex items-center gap-3 p-4 rounded-xl border border-border bg-card hover:border-primary/40 hover:bg-primary/5 transition-[var(--transition-smooth)] group"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-primary-foreground group-hover:scale-110 transition-transform">
@@ -567,8 +572,7 @@ export default function HomePage() {
                   <span className="block font-medium text-foreground">Twitter (X)</span>
                   <span className="text-primary text-sm">@mhentor</span>
                 </div>
-              </Link>
-              </motion.div>
+              </motion.a>
             </div>
             <div className="card-premium p-6">
               <ContactForm />
