@@ -166,7 +166,7 @@ export default function HomePage() {
           className="relative z-10 max-w-5xl mx-auto text-center px-6"
         >
           <motion.div variants={itemVariants} className="mb-8 flex justify-center">
-            <div className="w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full overflow-hidden ring-4 ring-primary/30 shadow-premium bg-background/80 p-2 flex items-center justify-center">
+            <div className="w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full overflow-hidden ring-4 ring-primary/30 shadow-premium aspect-square">
               <video
                 src="/logo-hero.mp4.mp4"
                 autoPlay
