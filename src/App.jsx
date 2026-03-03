@@ -9,6 +9,7 @@ import ProjectsPage from './pages/ProjectsPage'
 import CategoryProjectsPage from './pages/CategoryProjectsPage'
 import SkillDetailPage from './pages/SkillDetailPage'
 import SubSkillDetailPage from './pages/SubSkillDetailPage'
+import AboutPage from './pages/AboutPage'
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <main>
               <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
               <Route path="/hire-me" element={<HireMePage />} />
               {/* Most specific first for correct matching */}
               <Route path="/projects/:serviceSlug/:categorySlug" element={<CategoryProjectsPage />} />

@@ -62,6 +62,24 @@ export const portfolioData = {
     content: "I'm Moses Sunday (Mhentor), a full-stack developer and digital problem solver focused on building systems that drive measurable growth.",
     values: "Excellence, Innovation, Integrity drive everything I create and every relationship I build.",
   },
+  // About page FAQs (15) – what clients commonly ask
+  aboutFaqs: [
+    { q: "What kind of projects do you build?", a: "I build full-stack web applications, e-commerce sites, dashboards, APIs, business automation tools, and high-converting websites. I also work on frontend-focused projects (React, responsive UI) and backend systems (Node.js, databases, auth)." },
+    { q: "How long does a typical project take?", a: "It depends on scope: a simple landing page or MVP can take 2–4 weeks; a full web app or e-commerce site often 6–12 weeks. I give a clear timeline and milestones after we define requirements." },
+    { q: "Do you work with startups and small businesses?", a: "Yes. I focus on startups, entrepreneurs, and growing businesses. I’m used to turning ideas into MVPs and scaling them with clear structure and performance in mind." },
+    { q: "What technologies do you use?", a: "Frontend: React, Next.js, TypeScript, Tailwind CSS. Backend: Node.js, Express, REST/GraphQL APIs. Data: PostgreSQL, MongoDB, Supabase. I also use Docker, CI/CD, and modern deployment practices." },
+    { q: "Do you offer ongoing support or maintenance?", a: "Yes. After launch I can provide bug fixes, updates, and feature additions. We can agree on a retainer or per-task support depending on your needs." },
+    { q: "How do you handle project communication?", a: "I use clear channels (email, chat, or your preferred tool), regular updates, and milestone check-ins so you’re always in the loop and can give feedback early." },
+    { q: "Can you work with my existing design or brand?", a: "Yes. I can implement from Figma/design files, match your brand guidelines, or suggest improvements while keeping your visual identity." },
+    { q: "Do you build mobile apps?", a: "I build mobile-friendly web apps (PWAs) and can develop cross-platform apps with React Native. For native-only needs I can guide you or work with specialists." },
+    { q: "How do you price projects?", a: "Pricing is based on scope, timeline, and complexity. I provide a clear quote after we discuss requirements. I offer fixed-price for defined scope or phased engagements for larger projects." },
+    { q: "What if I need changes after the project is done?", a: "Revisions within the agreed scope are part of the process. Additional features or changes after sign-off can be quoted separately or covered under a support agreement." },
+    { q: "Do you work remotely?", a: "Yes. I work remotely and am used to async communication and collaboration across time zones." },
+    { q: "Can you integrate with my existing tools (CRM, payments, etc.)?", a: "Yes. I regularly integrate with payment gateways, CRMs, analytics, and other APIs. Tell me your stack and I’ll outline what’s possible." },
+    { q: "What makes your approach different?", a: "I focus on architecture and scale from day one, combine technical and product thinking, and prioritize performance and real business outcomes—not just features." },
+    { q: "How do I get started?", a: "Use the Hire Me form or contact me with your idea and goals. We’ll align on scope, timeline, and next steps, then move into development." },
+    { q: "Do you sign NDAs or keep my idea confidential?", a: "Yes. I’m happy to sign NDAs and keep project details and ideas confidential. We can agree on this before sharing sensitive information." },
+  ],
   // Testimonial snippets for hero (short one-liners)
   testimonialSnippets: [
     { name: "Alex Okonkwo", snippet: "Exceptional work! Delivered beyond expectations.", role: "Founder, NovaTech Solutions" },

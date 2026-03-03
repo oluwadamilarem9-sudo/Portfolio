@@ -6,7 +6,7 @@ import { portfolioData } from '../data/portfolio'
 
 const navLinks = [
   { path: '/', hash: null, label: 'Home', isHome: true },
-  { path: '/', hash: '#about', label: 'About' },
+  { path: '/about', hash: null, label: 'About' },
   { path: '/', hash: '#skills', label: 'Skills' },
   { path: '/projects', hash: null, label: 'Projects' },
   { path: '/', hash: '#testimonials', label: 'Testimonials' },

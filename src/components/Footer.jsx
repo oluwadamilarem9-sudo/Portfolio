@@ -44,7 +44,7 @@ export default function Footer() {
             <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to={{ pathname: '/', hash: 'about' }} className="text-muted-foreground hover:text-primary text-sm transition-colors">
+                <Link to="/about" className="text-muted-foreground hover:text-primary text-sm transition-colors">
                   About
                 </Link>
               </li>
