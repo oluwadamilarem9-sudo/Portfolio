@@ -24,6 +24,19 @@ export default function Hero() {
         >
           {hero.greeting}
         </p>
+        <div
+          className="mx-auto mb-8 h-40 w-40 md:h-48 md:w-48 rounded-full overflow-hidden border-4 border-accent-500/60 shadow-xl hero-animate"
+          style={{ animationDelay: '0.05s' }}
+        >
+          <video
+            src="/logo-hero.mp4.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="h-full w-full object-cover"
+          />
+        </div>
         <h1
           className="font-display font-bold text-5xl md:text-7xl lg:text-8xl text-surface-900 dark:text-white mb-6 hero-animate"
           style={{ animationDelay: '0.1s' }}

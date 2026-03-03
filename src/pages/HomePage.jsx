@@ -165,24 +165,19 @@ export default function HomePage() {
           variants={heroContainerVariants}
           className="relative z-10 max-w-5xl mx-auto text-center px-6"
         >
-          {(personal.logo || hero.avatar) ? (
-            <motion.div variants={itemVariants} className="mb-8 flex justify-center">
-              <img
-                src={personal.logo || hero.avatar}
-                alt={hero.name}
-                className="w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full object-contain ring-4 ring-primary/30 shadow-premium bg-background/80 p-2"
+          <motion.div variants={itemVariants} className="mb-8 flex justify-center">
+            <div className="w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full overflow-hidden ring-4 ring-primary/30 shadow-premium bg-background/80 p-2 flex items-center justify-center">
+              <video
+                src="/logo-hero.mp4.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+                aria-label={hero.name}
               />
-            </motion.div>
-          ) : (
-            <motion.div variants={itemVariants} className="mb-8 flex justify-center">
-              <div
-                className="w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center font-bold text-3xl md:text-4xl shadow-premium ring-4 ring-primary/20 text-primary-foreground"
-                style={{ background: 'var(--gradient-primary)' }}
-              >
-                {hero.name.charAt(0)}
-              </div>
-            </motion.div>
-          )}
+            </div>
+          </motion.div>
           <motion.h1 variants={itemVariants} className="font-bold text-4xl md:text-6xl lg:text-7xl mb-2 leading-tight">
             <span className="gradient-text">{hero.headline || hero.name}</span>
             <span className="block text-2xl md:text-3xl lg:text-4xl text-primary mt-1 font-normal">
