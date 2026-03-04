@@ -328,6 +328,24 @@ export const portfolioData = {
       quote: "Working with Mhentor was seamless from start to finish. His strategic approach and deep understanding of modern technologies helped us achieve our goals faster than anticipated.",
       image: "/testimonials/steven-mensah.png",
     },
+    {
+      name: "Ada Nwosu",
+      role: "Product Lead, Skyline HR",
+      quote: "He transformed a messy internal process into a clean, automated system. Our team saves hours every week and leadership finally has clear visibility into what is happening.",
+      image: "/testimonials/ada-nwosu.png",
+    },
+    {
+      name: "Tobi Johnson",
+      role: "Technical Founder, MetricFlow",
+      quote: "Beyond writing code, Mhentor helped us think through architecture, performance, and rollout. His attention to detail gave us confidence to ship to paying customers.",
+      image: "/testimonials/tobi-johnson.png",
+    },
+    {
+      name: "Sarah Mensah",
+      role: "Operations Manager, BrightLane Logistics",
+      quote: "Our custom dashboard and automation flows have reduced manual work dramatically. Communication was clear, deadlines were met, and the final result felt tailor-made for our business.",
+      image: "/testimonials/sarah-mensah.png",
+    },
   ],
   capabilities: [
     "Secure authentication systems (JWT, OAuth, role-based access)",

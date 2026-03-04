@@ -208,6 +208,11 @@
   animation: scrollRight 30s linear infinite;
 }
 
+/* Slow train-style scroll for testimonials */
+.animate-scroll-left-slow {
+  animation: scrollLeft 80s linear infinite;
+}
+
 @keyframes gradientShift {
   0%, 100% {
     opacity: 1;

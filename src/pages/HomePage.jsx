@@ -58,6 +58,61 @@ const heroContainerVariants = {
   },
 }
 
+function TestimonialCard({ t }) {
+  return (
+    <div className="card-premium p-6 flex-shrink-0 w-[min(100%,22rem)] min-w-[280px] md:w-[22rem] h-full flex flex-col">
+      <div className="flex items-start gap-3 mb-3">
+        <img
+          src={
+            t.image ||
+            `https://ui-avatars.com/api/?name=${encodeURIComponent(t.name)}&background=14b8a6&color=fff&size=64`
+          }
+          alt={t.name}
+          className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+          onError={(e) => {
+            if (t.image) {
+              e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(t.name)}&background=14b8a6&color=fff&size=64`
+            }
+          }}
+        />
+        <div className="min-w-0">
+          <h3 className="font-semibold text-foreground text-sm">{t.name}</h3>
+          <p className="text-muted-foreground text-xs truncate">{t.role}</p>
+        </div>
+      </div>
+      <div className="flex gap-0.5 mb-3">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <svg key={star} className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
+      </div>
+      <p className="text-muted-foreground text-sm italic leading-relaxed flex-1 line-clamp-4">
+        &quot;{t.quote}&quot;
+      </p>
+    </div>
+  )
+}
+
+function TestimonialsCarousel({ testimonials }) {
+  if (!testimonials?.length) return null
+  // Duplicate for seamless infinite train loop (scrollLeft goes -50%)
+  const strip = [...testimonials, ...testimonials]
+
+  return (
+    <div className="overflow-hidden w-full max-w-6xl mx-auto" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+      <div
+        className="flex gap-6 animate-scroll-left-slow"
+        style={{ width: 'max-content' }}
+      >
+        {strip.map((t, i) => (
+          <TestimonialCard key={`${t.name}-${i}`} t={t} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function HeroImageCarousel({ images }) {
   const hasImages = images?.length > 0
   // Duplicate for seamless infinite loop
@@ -452,56 +507,17 @@ export default function HomePage() {
 
       <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
-      {/* Client Testimonials */}
+      {/* Client Testimonials – carousel */}
       <section id="testimonials" className="py-24 px-6 md:px-12 lg:px-24 scroll-mt-20">
-        <div className="max-w-6xl mx-auto section-container">
-          <motion.h2 {...fadeInUp} className="font-bold text-3xl md:text-4xl text-foreground mb-4">
+        <div className="max-w-4xl mx-auto section-container">
+          <motion.h2 {...fadeInUp} className="font-bold text-3xl md:text-4xl text-foreground mb-4 text-center">
             Client <span className="gradient-text">Testimonials</span>
           </motion.h2>
-          <motion.p {...fadeInUp} className="text-muted-foreground mb-12">
+          <motion.p {...fadeInUp} className="text-muted-foreground mb-12 text-center">
             What people say about working with me
           </motion.p>
-          <motion.div
-            className="grid md:grid-cols-3 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
-            variants={staggerContainer}
-          >
-            {(testimonials || []).map((t, i) => (
-              <motion.div
-                key={i}
-                variants={itemVariants}
-                whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="card-premium p-6"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <img
-                    src={t.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(t.name)}&background=14b8a6&color=fff&size=64`}
-                    alt={t.name}
-                    className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-                    onError={(e) => {
-                      if (t.image) {
-                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(t.name)}&background=14b8a6&color=fff&size=64`
-                      }
-                    }}
-                  />
-                  <div>
-                    <h3 className="font-semibold text-foreground">{t.name}</h3>
-                    <p className="text-muted-foreground text-sm">{t.role}</p>
-                  </div>
-                </div>
-                <div className="flex gap-1 mb-4">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <svg key={star} className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-muted-foreground text-sm italic leading-relaxed">&quot;{t.quote}&quot;</p>
-              </motion.div>
-            ))}
-          </motion.div>
+
+          <TestimonialsCarousel testimonials={testimonials || []} />
         </div>
       </section>
 
