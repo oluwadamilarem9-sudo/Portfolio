@@ -26,10 +26,11 @@ function App() {
               playsInline
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/60" aria-hidden />
+            {/* Slight overlay so content stays readable but video is visible */}
+            <div className="absolute inset-0 bg-black/40" aria-hidden />
           </div>
 
-          <div className="relative min-h-screen bg-background/85">
+          <div className="relative min-h-screen bg-background/80">
             <Navbar />
             <LiveChat />
             <main>
