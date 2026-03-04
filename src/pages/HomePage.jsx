@@ -86,7 +86,7 @@ function HeroImageCarousel({ images }) {
   )
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-50">
       <ImageRow direction="left" className="top-20" />
       <ImageRow direction="right" className="bottom-20" />
     </div>
