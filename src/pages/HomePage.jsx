@@ -382,12 +382,23 @@ export default function HomePage() {
           >
             {skills.map((skill) => {
               const IconComponent = skillIcons[skill.icon] || CodeIcon
+              const skillImage = skill.image
               return (
                 <motion.div key={skill.slug} variants={itemVariants}>
                   <Link
                     to={`/skills/${skill.slug}`}
-                    className="card-premium block group"
+                    className="card-premium block group overflow-hidden"
                   >
+                    {skillImage && (
+                      <div className="mb-4 rounded-xl overflow-hidden h-32">
+                        <img
+                          src={skillImage}
+                          alt={skill.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
                       <IconComponent className="w-6 h-6" />
                     </div>
