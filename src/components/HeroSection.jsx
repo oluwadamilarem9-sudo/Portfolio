@@ -152,6 +152,8 @@ function ProfilePortrait({ hero, reducedMotion }) {
             loop
             muted
             playsInline
+            preload="metadata"
+            poster={hero.avatar || '/3fe81c63-18c4-4caa-b364-afbb46f30536.png'}
             className="w-full h-full object-cover"
             aria-label={hero.name}
           />

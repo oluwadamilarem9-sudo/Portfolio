@@ -1,15 +1,37 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
-import ServicesSection from '@/components/services/ServicesSection'
-import ProjectsShowcase from '@/components/projects/ProjectsShowcase'
-import Footer from '@/components/Footer'
 import { portfolioData } from '@/data/portfolio'
+
+const ServicesSection = dynamic(() => import('@/components/services/ServicesSection'), {
+  loading: () => <SectionSkeleton />,
+})
+
+const ProjectsShowcase = dynamic(() => import('@/components/projects/ProjectsShowcase'), {
+  loading: () => <SectionSkeleton />,
+})
+
+const Footer = dynamic(() => import('@/components/Footer'), {
+  loading: () => null,
+})
 
 const Divider = () => (
   <div className="h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent" />
 )
+
+function SectionSkeleton() {
+  return (
+    <div className="section-padding py-24" aria-hidden>
+      <div className="max-w-6xl mx-auto space-y-4 animate-pulse">
+        <div className="h-4 w-28 mx-auto rounded bg-muted" />
+        <div className="h-10 w-64 mx-auto rounded bg-muted" />
+        <div className="h-40 rounded-2xl bg-muted/70" />
+      </div>
+    </div>
+  )
+}
 
 export default function HomeView() {
   const { hero, about, services, projects } = portfolioData
@@ -20,7 +42,7 @@ export default function HomeView() {
       <HeroSection hero={hero} />
       <Divider />
 
-      <section className="section-padding py-20 md:py-24">
+      <section className="section-padding py-20 md:py-24 content-visibility-auto">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">About Me</p>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
@@ -36,12 +58,16 @@ export default function HomeView() {
       </section>
 
       <Divider />
-      <ServicesSection services={services} />
+      <div className="content-visibility-auto">
+        <ServicesSection services={services} />
+      </div>
       <Divider />
-      <ProjectsShowcase projects={projects} showViewAllLink />
+      <div className="content-visibility-auto">
+        <ProjectsShowcase projects={projects} showViewAllLink />
+      </div>
       <Divider />
 
-      <section className="section-padding py-20">
+      <section className="section-padding py-20 content-visibility-auto">
         <div className="max-w-4xl mx-auto card-premium p-8 md:p-12 text-center">
           <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
             Ready to build something <span className="gradient-text">exceptional?</span>

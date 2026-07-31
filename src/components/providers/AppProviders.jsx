@@ -1,33 +1,37 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import { ThemeProvider } from '@/context/ThemeContext'
-import ThemeBackdrop from '@/components/theme/ThemeBackdrop'
-import GlassBubblesBackground from '@/components/theme/GlassBubblesBackground'
-import ThemeRevealOverlay from '@/components/theme/ThemeRevealOverlay'
 import Navbar from '@/components/Navbar'
-import LiveChat from '@/components/LiveChat'
+import DeferredBackgroundVideo from '@/components/theme/DeferredBackgroundVideo'
+import DeferredLiveChat from '@/components/DeferredLiveChat'
+
+const ThemeBackdrop = dynamic(() => import('@/components/theme/ThemeBackdrop'), {
+  ssr: false,
+  loading: () => null,
+})
+
+const GlassBubblesBackground = dynamic(() => import('@/components/theme/GlassBubblesBackground'), {
+  ssr: false,
+  loading: () => null,
+})
+
+const ThemeRevealOverlay = dynamic(() => import('@/components/theme/ThemeRevealOverlay'), {
+  ssr: false,
+  loading: () => null,
+})
 
 export default function AppProviders({ children }) {
   return (
     <ThemeProvider>
       <div className="relative min-h-screen text-foreground">
         <ThemeBackdrop />
-        <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-          <video
-            src="/thunder-backgroud-pages.png.mp4.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="theme-bg-video absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="theme-video-overlay absolute inset-0" aria-hidden />
-        </div>
+        <DeferredBackgroundVideo />
         <GlassBubblesBackground />
         <ThemeRevealOverlay />
         <div className="relative z-10 min-h-screen theme-content-shell">
           <Navbar />
-          <LiveChat />
+          <DeferredLiveChat />
           <main id="main-content">{children}</main>
         </div>
       </div>

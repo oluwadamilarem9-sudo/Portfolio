@@ -1,12 +1,10 @@
 'use client'
 
-'use client'
-
 import { useMemo } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { useTheme } from '../../context/ThemeContext'
 
-const STAR_COUNT = 24
+const STAR_COUNT = 12
 const CLOUDS = [
   { id: 1, top: '18%', left: '8%', width: 120, delay: 0, duration: 38 },
   { id: 2, top: '28%', left: '62%', width: 160, delay: 4, duration: 44 },

@@ -1563,10 +1563,38 @@
 .theme-bg-video {
   opacity: 0.35;
   transition: opacity var(--theme-transition-duration) ease;
+  will-change: opacity;
+}
+
+.theme-bg-video-fallback {
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, hsl(var(--primary) / 0.18), transparent 60%),
+    hsl(var(--background));
 }
 
 .dark .theme-bg-video {
   opacity: 0.55;
+}
+
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 720px;
+}
+
+@media (max-width: 768px) {
+  .glass-bubbles-layer {
+    display: none;
+  }
+
+  .theme-bg-video {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content-visibility-auto {
+    content-visibility: visible;
+  }
 }
 
 .theme-video-overlay {
