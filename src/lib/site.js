@@ -27,7 +27,9 @@ export const siteConfig = {
   ],
   ogImage: '/3fe81c63-18c4-4caa-b364-afbb46f30536.png',
   twitterHandle: '@Mhentor001',
-  googleSiteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
+  googleSiteVerification:
+    process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ||
+    'wUP3iEblxKHrvtwRk_39AidDO6zPQXnWkKbg1lVnabo',
 }
 
 export function absoluteUrl(path = '/') {
