@@ -118,6 +118,7 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="wUP3iEblxKHrvtwRk_39AidDO6zPQXnWkKbg1lVnabo"
         />
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <JsonLd data={[personSchema(), organizationSchema(), websiteSchema()]} />
