@@ -1,11 +1,22 @@
 import HomeView from '@/views/HomeView'
-import { pageMetadata } from '@/lib/site'
+import JsonLd from '@/components/seo/JsonLd'
+import { pageMetadata, siteConfig } from '@/lib/site'
+import { faqSchema } from '@/lib/seo'
+import { portfolioData } from '@/data/portfolio'
 
-export const metadata = pageMetadata(
-  'Home',
-  'Full-stack developer building scalable digital systems that drive real business growth for startups and growing brands.'
-)
+export const metadata = pageMetadata({
+  title: siteConfig.title,
+  description: siteConfig.description,
+  path: '/',
+  absoluteTitle: true,
+  keywords: siteConfig.keywords,
+})
 
 export default function HomePage() {
-  return <HomeView />
+  return (
+    <>
+      <JsonLd data={faqSchema(portfolioData.faq || [])} />
+      <HomeView />
+    </>
+  )
 }

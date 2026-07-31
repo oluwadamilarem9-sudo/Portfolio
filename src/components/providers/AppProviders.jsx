@@ -28,7 +28,7 @@ export default function AppProviders({ children }) {
         <div className="relative z-10 min-h-screen theme-content-shell">
           <Navbar />
           <LiveChat />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
         </div>
       </div>
     </ThemeProvider>

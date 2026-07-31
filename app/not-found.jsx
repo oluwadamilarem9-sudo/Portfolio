@@ -1,9 +1,12 @@
 import Link from 'next/link'
+import { pageMetadata } from '@/lib/site'
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Page Not Found',
-  description: 'The page you are looking for does not exist.',
-}
+  description: 'The page you are looking for does not exist on Mhentor’s official website.',
+  path: '/',
+  noIndex: true,
+})
 
 export default function NotFound() {
   return (

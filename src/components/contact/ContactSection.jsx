@@ -36,6 +36,7 @@ const SOCIAL_ICONS = {
   GitHub: GithubIcon,
   Twitter: TwitterIcon,
   LinkedIn: LinkedInIcon,
+  WhatsApp: WhatsAppIcon,
 }
 
 function ReviewCard({ review }) {
@@ -120,10 +121,11 @@ export default function ContactSection({ contact, personal, testimonials }) {
   const bookingExternal = Boolean(bookingUrl)
 
   const whatsappUrl = useMemo(() => {
+    if (contact.whatsappUrl?.trim()) return contact.whatsappUrl.trim()
     const phone = personal.phone?.replace(/\D/g, '') || ''
     const text = encodeURIComponent(contact.whatsappMessage || "Hi! I'd like to discuss a project.")
     return phone ? `https://wa.me/${phone}?text=${text}` : null
-  }, [personal.phone, contact.whatsappMessage])
+  }, [contact.whatsappUrl, personal.phone, contact.whatsappMessage])
 
   const copyEmail = useCallback(async () => {
     try {

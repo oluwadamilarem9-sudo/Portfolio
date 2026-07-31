@@ -5,12 +5,12 @@ export const portfolioData = {
     realName: "Moses Sunday",
     email: "mhentor001@gmail.com",
     github: "https://github.com/oluwadamilarem9-sudo",
-    twitter: "https://x.com/mhentor",
+    twitter: "https://x.com/Mhentor001",
     linkedin: "https://linkedin.com/in/mhentor",
     logo: "/3fe81c63-18c4-4caa-b364-afbb46f30536.png",
     greeting: "Hello, I'm",
     profileImage: "/dacced.png",
-    phone: "+2348012345678",
+    phone: "+2348141757272",
   },
   contact: {
     title: "Let's Work Together",
@@ -23,6 +23,7 @@ export const portfolioData = {
     calendlyUrl: null,
     calendlyLabel: "Book a Free Discovery Call",
     bookingLink: "/hire-me",
+    whatsappUrl: "https://wa.me/message/FNKLUZ7RFFFKL1",
     whatsappMessage: "Hi Mhentor! I'd like to discuss a project with you.",
     trustBadges: [
       "100% Client Satisfaction",
@@ -32,8 +33,9 @@ export const portfolioData = {
     ],
     socialLinks: [
       { platform: "GitHub", url: "https://github.com/oluwadamilarem9-sudo", handle: "@oluwadamilarem9-sudo" },
-      { platform: "Twitter", url: "https://x.com/mhentor", handle: "@mhentor" },
+      { platform: "Twitter", url: "https://x.com/Mhentor001", handle: "@Mhentor001" },
       { platform: "LinkedIn", url: "https://linkedin.com/in/mhentor", handle: "Mhentor" },
+      { platform: "WhatsApp", url: "https://wa.me/message/FNKLUZ7RFFFKL1", handle: "WhatsApp Business" },
     ],
   },
   hero: {
@@ -495,6 +497,8 @@ export const portfolioData = {
       { label: "Experience", href: "/experience" },
       { label: "Contact", href: "/contact" },
       { label: "Resume", href: "/resume" },
+      { label: "Privacy", href: "/privacy" },
+      { label: "Terms", href: "/terms" },
     ],
   },
   // About page FAQs (15) – what clients commonly ask

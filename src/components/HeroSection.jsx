@@ -201,7 +201,9 @@ export default function HeroSection({ hero }) {
         <motion.h1
           variants={fadeUp}
           className="hero-headline font-bold text-[2rem] sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[3.75rem] mb-6 md:mb-8 text-foreground"
+          aria-label={`Mhentor — ${hero.headline}`}
         >
+          <span className="sr-only">Mhentor. </span>
           <HighlightedHeadline text={hero.headline} highlights={hero.headlineHighlights} />
         </motion.h1>
 

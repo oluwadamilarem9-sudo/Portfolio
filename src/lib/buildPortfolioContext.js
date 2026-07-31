@@ -5,7 +5,7 @@
 
 export function buildPortfolioContext(data) {
   if (!data) return ''
-  const { hero, about, skills, projects, personal, capabilities, testimonials } = data
+  const { hero, about, skills, projects, personal, capabilities, testimonials, contact } = data
 
   const sections = []
 
@@ -70,9 +70,11 @@ export function buildPortfolioContext(data) {
     sections.push(
       `## Contact\n` +
         `- Email: ${personal.email}\n` +
+        (personal.phone ? `- Phone: ${personal.phone}\n` : '') +
+        (contact?.whatsappUrl ? `- WhatsApp Business: ${contact.whatsappUrl}\n` : '') +
         (personal.linkedin ? `- LinkedIn: ${personal.linkedin}\n` : '') +
         (personal.github ? `- GitHub: ${personal.github}\n` : '') +
-        (personal.twitter ? `- Twitter: ${personal.twitter}\n` : '')
+        (personal.twitter ? `- Twitter/X: ${personal.twitter}\n` : '')
     )
   }
 

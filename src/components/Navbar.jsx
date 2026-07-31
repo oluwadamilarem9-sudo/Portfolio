@@ -41,8 +41,10 @@ function NavBrand({ onClick }) {
         <span className="navbar-brand-glow" aria-hidden />
         <motion.img
           src={logo}
-          alt=""
+          alt="Mhentor logo"
           className="relative z-10 h-9 w-9 rounded-xl object-contain"
+          width={36}
+          height={36}
           animate={reducedMotion ? {} : { y: [0, -2, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
         />

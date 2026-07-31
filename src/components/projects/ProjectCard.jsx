@@ -1,7 +1,5 @@
 'use client'
 
-'use client'
-
 import { motion } from 'framer-motion'
 import { STATUS_STYLES } from './projectUtils'
 import ProjectMediaCarousel from './ProjectMediaCarousel'
