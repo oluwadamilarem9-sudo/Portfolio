@@ -1019,6 +1019,104 @@ export const portfolioData = {
   projectCategories: ["All", "Frontend", "Full Stack", "UI/UX", "API"],
   projects: [
     {
+      slug: "mhentors-marketing-growth-platform",
+      title: "Mhentors Marketing Growth Platform",
+      description:
+        "A conversion-focused marketing growth platform that helps ambitious businesses scale with data-driven strategy, mentorship, and clear calls to action — live on Vercel.",
+      overview:
+        "Mhentors is a premium marketing growth platform built to turn visitors into leads. The experience pairs a strong brand narrative with social proof, benefit-led sections, and dual CTAs so users can start free or explore services in one clear path. The hero uses a modern two-column layout: value proposition and actions on the left, a growth-themed 3D visual with a floating revenue insight card on the right, followed by trust metrics and value propositions that reinforce ROI.",
+      problem:
+        "Marketing brands often launch with vague messaging, weak hierarchy, and little proof — so visitors bounce before they ever book a call or start a trial. Mhentors needed a landing experience that feels premium, builds trust instantly, and drives action.",
+      solution:
+        "Designed and shipped a high-converting marketing site with a bold teal brand system, conversion-centered hero, floating social-proof card (+247% revenue insight), metric strip (clients, success rate, ROI), and benefit sections that speak to growth, targeting, mentorship, and speed. Deployed live on Vercel for fast global delivery.",
+      category: "Frontend",
+      year: 2026,
+      status: "Live",
+      features: [
+        "Conversion-centered hero with primary and secondary CTAs",
+        "Trust metrics bar: 500+ clients, 95% success rate, 3x avg. ROI",
+        "Floating insight card highlighting +247% revenue growth",
+        "Benefit grid: growth, targeting, mentorship, and rapid execution",
+        "Responsive, high-contrast typography with brand accent highlights",
+        "Clean visual hierarchy with generous whitespace and premium 3D visuals",
+      ],
+      performanceImprovements: [
+        "Deployed on Vercel for edge-cached, globally fast page delivery",
+        "Lightweight hero composition prioritized for first-viewport clarity",
+        "Clear CTA hierarchy to reduce decision friction and bounce",
+        "Mobile-friendly layout that preserves messaging and proof on small screens",
+      ],
+      challenges: [
+        "Balancing bold 3D visuals with fast, uncluttered messaging",
+        "Making social proof feel credible without overcrowding the hero",
+        "Keeping brand energy high while staying conversion-focused",
+      ],
+      metrics: [
+        { label: "Clients Served", value: "500+" },
+        { label: "Success Rate", value: "95%" },
+        { label: "Avg. ROI", value: "3x" },
+        { label: "Revenue Lift", value: "+247%" },
+      ],
+      tech: ["React", "Tailwind CSS", "Vite", "Vercel", "Framer Motion"],
+      demo: "https://mhentors-marketing-growth-platform.vercel.app/",
+      code: null,
+      gradient: "from-teal-400 to-cyan-600",
+      image: "/featured/mhentors-marketing.jpg",
+      screenshots: ["/featured/mhentors-marketing.jpg"],
+      videoDemo: null,
+      serviceSlug: "frontend-development",
+      categorySlug: "responsive-ui",
+    },
+    {
+      slug: "leadradar",
+      title: "LeadRadar",
+      description:
+        "AI-powered lead intelligence platform that scans public conversations in real time and surfaces high-intent prospects with intent scores and confidence ratings — before competitors can respond.",
+      overview:
+        "LeadRadar is a SaaS command center for lead intelligence. It monitors millions of public conversations across Reddit, Twitter/X, LinkedIn, Indeed, and more, then delivers scored “hot leads” into a live dashboard with inbox, sources, analytics, and alerts. The product marketing site and product UI emphasize speed-to-pipeline: LIVE status, second-level timestamps, intent badges, and confidence percentages so teams know who to contact first.",
+      problem:
+        "Agencies, freelancers, and sales teams waste hours on cold outreach while high-intent buyers are already asking for services in public forums and social feeds — and competitors who reply first win the deal.",
+      solution:
+        "Built a conversion-ready product site and dark-mode lead dashboard that showcases real-time monitoring, multi-source aggregation, AI intent/confidence scoring, and a clear path from keyword setup to closed deals. Includes feature storytelling, how-it-works flow, pricing tiers, and social proof tailored to agencies and high-growth teams.",
+      category: "Full Stack",
+      year: 2026,
+      status: "Live",
+      features: [
+        "Real-time Hot Leads feed with LIVE status and second-level timestamps",
+        "AI intent scores and confidence percentages for every lead",
+        "Multi-platform monitoring: Reddit, Twitter/X, LinkedIn, Indeed, and more",
+        "Sidebar command center: Inbox, Hot Leads, Sources, Analytics, Alerts, Settings",
+        "Keyword search, source filters, and time-window controls",
+        "Product marketing site with features, how-it-works, pricing, FAQ, and social proof",
+      ],
+      performanceImprovements: [
+        "Designed for instant scanability — score badges and quotes visible without opening details",
+        "Deployed on Vercel for fast global delivery of the marketing + product experience",
+        "Dense but readable dark UI that keeps high-intent signals above the fold",
+        "Clear information hierarchy so operators can triage leads in seconds",
+      ],
+      challenges: [
+        "Presenting dense lead data without overwhelming first-time visitors",
+        "Making AI scoring feel trustworthy and actionable in the UI",
+        "Balancing a polished SaaS landing page with a credible product dashboard preview",
+      ],
+      metrics: [
+        { label: "Conversations", value: "12M+" },
+        { label: "Hot Leads", value: "24" },
+        { label: "Peak Intent", value: "94" },
+        { label: "Confidence", value: "97%" },
+      ],
+      tech: ["React", "TypeScript", "Tailwind CSS", "Next.js", "Vercel"],
+      demo: "https://leadradar-u5di.vercel.app/",
+      code: null,
+      gradient: "from-violet-500 to-indigo-700",
+      image: "/featured/leadradar.png",
+      screenshots: ["/featured/leadradar.png"],
+      videoDemo: null,
+      serviceSlug: "full-stack-development",
+      categorySlug: "dashboards",
+    },
+    {
       slug: "e-commerce-platform",
       title: "E-Commerce Platform",
       description:
@@ -1057,7 +1155,7 @@ export const portfolioData = {
         { label: "API Response", value: "<120ms" },
       ],
       tech: ["React", "Node.js", "MongoDB", "Stripe", "Express"],
-      demo: "https://github.com/oluwadamilarem9-sudo",
+      demo: "https://my-wear-store.netlify.app",
       code: "https://github.com/oluwadamilarem9-sudo",
       gradient: "from-amber-400 to-orange-600",
       image: "/featured/e-commerce.png",

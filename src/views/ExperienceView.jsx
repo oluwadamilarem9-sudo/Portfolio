@@ -1,6 +1,5 @@
 'use client'
 
-import PageHero from '@/components/layout/PageHero'
 import ExperienceTimelineSection from '@/components/experience/ExperienceTimelineSection'
 import Footer from '@/components/Footer'
 import { portfolioData } from '@/data/portfolio'
@@ -10,13 +9,9 @@ export default function ExperienceView() {
 
   return (
     <>
-      <PageHero
-        title="Experience"
-        highlight="Experience"
-        subtitle="A practical journey of learning, building, and shipping production-ready systems."
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Experience' }]}
-      />
-      <ExperienceTimelineSection experienceTimeline={experienceTimeline} />
+      <div className="pt-16 lg:pt-[4.25rem]">
+        <ExperienceTimelineSection experienceTimeline={experienceTimeline} />
+      </div>
 
       <section className="section-padding py-20 bg-muted/20">
         <div className="max-w-5xl mx-auto">

@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import PageHero from '@/components/layout/PageHero'
 import ProjectsShowcase from '@/components/projects/ProjectsShowcase'
 import Footer from '@/components/Footer'
 import {
@@ -29,13 +28,9 @@ export default function ProjectsView() {
 
   return (
     <>
-      <PageHero
-        title="Projects"
-        highlight="Projects"
-        subtitle="Selected production-ready builds engineered for performance, scale, and business impact."
-        breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Projects' }]}
-      />
-      <ProjectsShowcase projects={projects} id="projects-page" />
+      <div className="pt-16 lg:pt-[4.25rem]">
+        <ProjectsShowcase projects={projects} id="projects-page" />
+      </div>
 
       <section className="section-padding pb-24">
         <div className="max-w-6xl mx-auto">
