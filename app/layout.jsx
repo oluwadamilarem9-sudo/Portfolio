@@ -72,9 +72,6 @@ export const metadata = {
     apple: [{ url: '/3fe81c63-18c4-4caa-b364-afbb46f30536.png' }],
     shortcut: ['/3fe81c63-18c4-4caa-b364-afbb46f30536.png'],
   },
-  verification: siteConfig.googleSiteVerification
-    ? { google: siteConfig.googleSiteVerification }
-    : undefined,
   category: 'technology',
   other: {
     'ai-content-declaration': 'human-authored portfolio website for Mhentor personal brand',
@@ -117,6 +114,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
       <head>
+        <meta
+          name="google-site-verification"
+          content="wUP3iEblxKHrvtwRk_39AidDO6zPQXnWkKbg1lVnabo"
+        />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <JsonLd data={[personSchema(), organizationSchema(), websiteSchema()]} />
