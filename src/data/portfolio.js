@@ -6,7 +6,7 @@ export const portfolioData = {
     email: "mhentor001@gmail.com",
     github: "https://github.com/oluwadamilarem9-sudo",
     twitter: "https://x.com/Mhentor001",
-    linkedin: "https://www.linkedin.com/in/sunday-moses-741250400",
+    linkedin: "https://www.linkedin.com/in/mhentor001/",
     logo: "/3fe81c63-18c4-4caa-b364-afbb46f30536.png",
     greeting: "Hello, I'm",
     profileImage: "/dacced.png",
@@ -34,7 +34,7 @@ export const portfolioData = {
     socialLinks: [
       { platform: "GitHub", url: "https://github.com/oluwadamilarem9-sudo", handle: "@oluwadamilarem9-sudo" },
       { platform: "Twitter", url: "https://x.com/Mhentor001", handle: "@Mhentor001" },
-      { platform: "LinkedIn", url: "https://www.linkedin.com/in/sunday-moses-741250400", handle: "Sunday Moses" },
+      { platform: "LinkedIn", url: "https://www.linkedin.com/in/mhentor001/", handle: "Mhentor" },
       { platform: "WhatsApp", url: "https://wa.me/message/FNKLUZ7RFFFKL1", handle: "WhatsApp Business" },
     ],
   },
